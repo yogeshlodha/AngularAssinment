@@ -1,0 +1,7 @@
+<h1> User Details </h1>
+<p *ngIf="!userDetails"><em>User details not found...</em></p>
+<div *ngIf="userDetails">
+  <div><b>First Name:</b> {{userDetails.First_Name}}</div>
+  <div><b>Last Name:</b> {{userDetails.Last_Name}}</div>
+  <div><b>Email:</b> {{userDetails.Email}} </div>
+</div>

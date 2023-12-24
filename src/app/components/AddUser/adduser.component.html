@@ -1,0 +1,42 @@
+<h1> Add User  </h1>
+<div>
+  <user-error (resaveFormData)="resaveFormData()"></user-error>
+</div>
+<table>
+  <tr>
+    <td>First Name </td>
+    <td><input type="text" maxlength="50" placeholder="enter your first name" [(ngModel)]="firstName" />  </td>
+  </tr>
+  <tr>
+    <td>Last Name </td>
+    <td><input type="text" maxlength="50" placeholder="enter your last name" [(ngModel)]="lastName" />  </td>
+  </tr>
+  <tr>
+    <td>Email</td>
+    <td><input type="email" maxlength="50" placeholder="enter your email" [(ngModel)]="email" />  </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button (click)="onSave()" [disabled]="!IsValidateFrom">
+        Save User Details
+      </button>
+    </td>
+  </tr>
+</table>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="users" style="float: left;">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>Email Address</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.First_Name }}</td>
+      <td>{{ user.Email }}</td>
+      <td><a href="./user/{{user.id}}">Show Me</a></td>
+    </tr>
+  </tbody>
+</table>

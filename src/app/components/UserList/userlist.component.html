@@ -1,0 +1,22 @@
+<h1 id="tableLabel">User List</h1>
+
+<p *ngIf="!users"><em>Loading user details...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="users" style="float: left;">
+  <thead>
+    <tr>
+      <th>Last Name</th>
+      <th>Email Address</th>
+      <th> </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users">
+      <td>{{ user.First_Name }}</td>
+      <td>{{ user.Email }}</td>
+      <td><a href="./user/{{user.id}}">Show Me</a></td>
+    </tr>
+  </tbody>
+</table>
+
+

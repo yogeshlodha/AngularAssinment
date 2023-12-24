@@ -1,0 +1,20 @@
+<style>
+  .center-text {
+    text-align: center;
+    float: inherit;
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+</style>
+<!--<app-in-memory-api-demo></app-in-memory-api-demo>-->
+
+<div class="center-text">
+  <h3>WelCome to {{ title }}- yogesh</h3>
+  <h4>
+    <a [routerLink]="['/user-list']">Visit Home</a> &nbsp;| &nbsp;
+    <a [routerLink]="['/add-user']">Visit Add User</a>
+  </h4>
+</div>
+<router-outlet></router-outlet>
